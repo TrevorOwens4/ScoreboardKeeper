@@ -12,8 +12,9 @@ int main()
 {
   int periods;
   int teams;
-
-  cout<<"How many competitors? ";
+  int row;
+ vector < vector < int > >scoreboard;
+ cout<<"How many competitors? ";
   cin>>teams;
   cout<<"How many scoring periods? ";
   cin>>periods;
@@ -28,8 +29,31 @@ int main()
   else
   {
    //make scoreboard and fill it with zeros
-  
-   //once created, display the scoreboard
-  }
+int score;
+scoreboard.resize(teams);
+for ( int row = 0; row < scoreboard.size(); row++)
+{
+scoreboard[row].resize(periods);
+for (int col = 0; col < scoreboard[row].size(); col++)
+scoreboard[row][col] = 0;
+}
+
+
+//once created, display the scoreboard
+int currentScore = 0;
+cout << "SCOREBOARD" << endl;
+
+for ( int row = 0; row < scoreboard.size(); row++)
+{
+cout << "Player " << row + 1 << ": ";
+for ( int col = 0; col < scoreboard[row].size(); col++)
+{
+cout << scoreboard[row][col] << "|";
+}
+cout << endl;
+} 
+ 
+ }
+
   return 0;
 }
