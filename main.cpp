@@ -1,3 +1,4 @@
+//Author: Trevor Owens
 #include <iostream>
 #include <vector>
 #include <cstdlib>
